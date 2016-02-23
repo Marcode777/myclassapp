@@ -1,0 +1,25 @@
+{
+  "name": "myclassapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marcode777/myclassapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marcode777/myclassapp/issues"
+  },
+  "homepage": "https://github.com/Marcode777/myclassapp#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "sequelize": "^3.19.3"
+  }
+}
