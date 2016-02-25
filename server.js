@@ -18,4 +18,28 @@ app.use(bodyParser.urlencoded({
   extended:false
 }); //these are options for bodyParser
 
+var TeachingAssistant = sequelize.define("teaching_assistant", {
+  firstname: {
+    type: Sequelize.STRING, 
+    allowNull: false,
+    validate: {
+      is: ["^[a-z]+$","i"]
+    }
+  },
 
+  lastname:{
+    type: Sequelize.STRING,
+    allowNull: false,
+    vaildate:{
+      is:["^[a-z]+$","i"]
+    }
+  }
+  email:{
+    type: Sequelize.STRING,
+    allowNUll:false
+  },
+  password:{
+    type: Sequelize.STRING,
+    allowNull:false
+  }
+}
