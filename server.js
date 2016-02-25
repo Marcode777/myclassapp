@@ -8,4 +8,14 @@ var app = express();
 
 app.use("/static", express.static("public")); //this is for static content 
 
+app.engine("handleBars", "express-handlebars"({
+  defaultLayout:"main"
+});//this sets the default layout for handlebars
+
+app.set("view engine", "handlebars"); // this sets view engine and handlebars
+
+app.use(bodyParser.urlencoded({
+  extended:false
+}); //these are options for bodyParser
+
 
