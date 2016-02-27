@@ -1,0 +1,36 @@
+<div class="row">
+  <form method="POST" action= "/registerInstructor" class="col s12">
+    <h3>Student Register</h3>
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate" name="first_name">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="last_name" type="text" class="validate" name="last_name">
+        <label for="last_name">Last Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" name="email">
+        <label for="email">Email</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" name="password">
+        <label for="password">Password</label>
+      </div>
+    </div>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test1" value="teacher" />
+      <label for="test1">Teacher</label>
+    </p>
+    <p>
+      <input class="with-gap" name="group1" type="radio" id="test2" value="ta" />
+      <label for="test2">TA</label>
+    </p>
+    <button class="waves-effect waves-light btn" type="submit">Submit</button>
+  </form>
+</div>
