@@ -1,6 +1,6 @@
 var express = require("express");
 var Sequelize = require("sequelize");
-var handleBars = require("express-handlebars");
+var expresshandleBars = require("express-handlebars");
 var bodyParser = require ("body-parser");
 var sequelize = new Sequelize("myclass_db", "root"); //myclass_db still has to be created
 var PORT = process.env.NODE_ENV|| 6000;
@@ -8,15 +8,15 @@ var app = express();
 
 app.use("/static", express.static("public")); //this is for static content 
 
-app.engine("handleBars", "express-handlebars"({
+app.engine("handleBars", expresshandleBars({
   defaultLayout:"main"
-});//this sets the default layout for handlebars
+}));//this sets the default layout for handlebars
 
 app.set("view engine", "handlebars"); // this sets view engine and handlebars
 
 app.use(bodyParser.urlencoded({
   extended:false
-}); //these are options for bodyParser
+})); //these are options for bodyParser
 
 var TeachingAssistant = sequelize.define("teaching_assistant", {//what does define do again?
   firstname: {
@@ -33,7 +33,7 @@ var TeachingAssistant = sequelize.define("teaching_assistant", {//what does defi
     vaildate:{
       is:["^[a-z]+$","i"]
     }
-  }
+  },
   email:{
     type: Sequelize.STRING,
     allowNUll:false
@@ -45,18 +45,18 @@ var TeachingAssistant = sequelize.define("teaching_assistant", {//what does defi
 });
 
 var Teacher = sequelize.define("teacher", {
-  firstname = {
+  firstname : {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
       is: ["^[a-z]+$", "i"]
     }
   },
-  lastname = {
+  lastname : {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      is ["^[a-z]+$", "i"]
+      is :["^[a-z]+$", "i"]
     }
   },
   email:{
