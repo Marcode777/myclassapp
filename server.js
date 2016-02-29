@@ -8,7 +8,7 @@ var app = express();
 
 app.use("/static", express.static("public")); //this is for static content 
 
-app.engine("handlebars", expresshandleBars({
+app.engine("handlebars", expresshandleBars({ //handlebars has to be lowercase somehow
   defaultLayout:"main"
 }));//this sets the default layout for handlebars
 
