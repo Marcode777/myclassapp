@@ -3,7 +3,7 @@ var Sequelize = require("sequelize");
 var expresshandleBars = require("express-handlebars");
 var bodyParser = require ("body-parser");
 var sequelize = new Sequelize("myclass_db", "root"); //myclass_db still has to be created
-var PORT = process.env.NODE_ENV|| 8080;
+var PORT = process.env.NODE_ENV|| 7000; // other ports work, with the exception, port 6000
 var app = express();
 
 app.use("/static", express.static("public")); //this is for static content 
