@@ -117,11 +117,11 @@ app.get("/", function (req, res){
 });
 
 app.get("/student_register", function(req, res){
-  res.render("student_register");
+  res.render("student_registration");
 });
 
 app.get("/instructor_register", function(req,res){
-  res.render("instructor_register");
+  res.render("instructor_registration");
 });
 
 app.get("/login", function(req, res){
